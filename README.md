@@ -1,6 +1,6 @@
 [DEMO LINK](https://kasianeno.github.io/2048-game/)
 
-<h1>Descriptioon</h1>
+<h1>Description</h1>
 
 The 2048 game is a classic puzzle game that can be developed in JavaScript by leveraging core programming concepts like loops, functions, and the Document Object Model (DOM). 
 The game is played on a 4x4 grid, which can be represented as a two-dimensional array in JavaScript. Each cell in this grid can either contain a number (a power of 2) or be empty (represented by 0).
