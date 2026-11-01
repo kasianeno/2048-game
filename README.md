@@ -49,7 +49,3 @@ src/
 ├── scripts/main.js     # game state, moves, merging, win and lose checks
 └── styles/main.scss    # board layout and tile colours
 ```
-
-## Credits
-
-Built as part of the [Mate Academy](https://mate.academy) Front-end course, on the course project template.
