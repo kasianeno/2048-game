@@ -1,37 +1,55 @@
-- [DEMO LINK](https://kasianeno.github.io/2048-game/)
+# 2048
 
-<h1>Description</h1>
+**The classic sliding-tile puzzle, built in vanilla JavaScript with no frameworks.**
 
-The 2048 game is a classic puzzle game that can be developed in JavaScript by leveraging core programming concepts like loops, functions, and the Document Object Model (DOM). 
-The game is played on a 4x4 grid, which can be represented as a two-dimensional array in JavaScript. Each cell in this grid can either contain a number (a power of 2) or be empty (represented by 0).
-To start the game, the grid needs to be initialized with two random tiles (either a 2 or a 4).
-The game listens for keypress events (up, down, left, right arrow keys) to move the tiles on the grid. This can be handled using event listeners.
-Each move operation (left, right, up, down) can be implemented as a function that manipulates the grid array. 
-After every move, the grid needs to be updated on the webpage. This involves updating the HTML elements representing each tile.
-The game should continuously check if the player has reached the 2048 tile or if there are no possible moves left.
+[![Live demo](https://img.shields.io/badge/live_demo-play-EDC22E?style=flat-square)](https://kasianeno.github.io/2048-game/)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)
+[![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-6f6d68?style=flat-square)](LICENSE)
 
-The game runs in a loop triggered by user actions. Each time a key is pressed, the corresponding movement function is called, which updates the grid, adds a new tile, updates the DOM, and checks for win or game-over conditions.
+[![2048 game board mid-game with score and restart button](docs/screenshot.png)](https://kasianeno.github.io/2048-game/)
 
-By combining loops (for iterating over the grid), functions (for handling movement and game logic), and DOM manipulation (for updating the visual representation), the 2048 game can be effectively implemented in JavaScript.
+**[Play it in the browser →](https://kasianeno.github.io/2048-game/)**
 
-This approach highlights how JavaScript's fundamental concepts can be used to create interactive and dynamic web-based games.
+## How to play
 
-<h2>In this project, i used the following technologies:</h2>
-<ol>
-  <li>HTML5: Used to structure the layout of the web page and define the grid where the game takes place.</li>
-  <li>CSS3: Used to set the size, colors, and animations for tiles. The game needs to be visually appealing, so animations for tile movements and merging are often added using CSS transitions.</li>
-  <li>SASS: A CSS preprocessor that enhances my CSS with features like variables, nesting, mixins, and partials for better organization and reusability.</li>
-  <li>JavaScript: The core technology used to implement the game logic and interactivity. It handles user input, tile movement, merging, scoring, and win/lose conditions.</li>
-  <li>DOM Manipulation: Updates the visual elements of the game dynamically as the player interacts with it.</li>
-  <li>Event Handling: Captures and responds to user inputs (arrow keys) to control tile movement.</li>
-  <li>Math & Random Numbers: Randomly generates new tiles on the grid after each move.</li>
-  <li>CSS Transitions: Adds smooth animations for moving and merging tiles.</li>
-</ol>
+Use the **arrow keys** to slide all tiles. Two tiles with the same number merge into one with their sum. Reach the **2048** tile to win. The game ends when the board is full and no merge is possible.
 
-<h2>How to run project locally:</h2>
-<ol>
-  <li>Clone repository using Git</li>
-  <li>Open your terminal</li>
-  <li>Install the standard package manager for Node.js using <b>npm i</b></li>
-  <li>Type <b>npm start</b> to run project locally.</li>
-</ol>
+## Features
+
+- 4 × 4 board stored as a two-dimensional array and re-rendered after each move
+- Slide-and-merge logic for all four directions, with each tile merging at most once per move
+- A new tile after every move: **2** with 90% probability, **4** with 10%
+- Running score that adds the value of every merged tile
+- Win message on reaching 2048 and a game-over message when no moves are left
+- Start and Restart button that resets the board and the score
+
+## Tech stack
+
+| | |
+|---|---|
+| Logic | JavaScript (ES6), DOM API, keyboard events |
+| Styles | SCSS with a colour for each tile value |
+| Tooling | Parcel, ESLint, Stylelint, GitHub Actions for linting |
+
+## Run locally
+
+```bash
+git clone https://github.com/kasianeno/2048-game.git
+cd 2048-game
+npm install
+npm start
+```
+
+## Project structure
+
+```
+src/
+├── index.html          # board, score and messages
+├── scripts/main.js     # game state, moves, merging, win and lose checks
+└── styles/main.scss    # board layout and tile colours
+```
+
+## Credits
+
+Built as part of the [Mate Academy](https://mate.academy) Front-end course, on the course project template.
